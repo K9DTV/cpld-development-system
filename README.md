@@ -10,11 +10,6 @@ This repository packs the PCB design, fabrication outputs, board photos, project
   <img src="cpld-green.jpg" alt="CPLD development board (green / Ver1 style)" width="420">
 </p>
 
-<p align="center">
-  <img src="cpld-pcb.png" alt="PCB copper / X-ray style view" width="320">
-  &nbsp;
-  <img src="cpld-sch.png" alt="Board schematic excerpt" width="320">
-</p>
 
 ## What this board is
 
@@ -113,6 +108,12 @@ Suggested tools: **Quartus II 13.0 SP1** (or the 17.1 Lite build noted in the `.
 - `PCB-files/CLPD-grb/` — Gerber layers (F/B Cu, mask, silk, edge cuts) and `cpld.drl`.
 
 Open with a modern KiCad via the legacy importer, or send the Gerbers straight to a fab.
+
+<p align="center">
+  <img src="cpld-pcb.png" alt="PCB copper / X-ray style view" width="420">
+  &nbsp;
+  <img src="cpld-sch.png" alt="Board schematic excerpt" width="420">
+</p>
 
 ## Documentation (`project docs/`)
 
