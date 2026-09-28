@@ -1,3 +1,4 @@
+> **Archived — final / last release.** This project is complete and frozen. Issues and PRs are not expected; the tree is the historical record.
 # CPLD Development System
 
 A hand-designed Altera MAX 7000S CPLD development board and the digital labs built on it — from Lake Washington Institute of Technology **Electronics 211** (2017–2018), by **James Burney (K9DTV)**.
