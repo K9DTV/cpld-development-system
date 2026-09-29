@@ -129,7 +129,7 @@ Course context: **Lake Washington Institute of Technology**, Electronics 211, in
 
 ## License / provenance
 
-Personal educational hardware and reports by James Burney (K9DTV). Course homework notes in `homework/` are included as archived class material. Altera/Intel tool output remains under their respective license terms.
+MIT -- see [LICENSE](LICENSE). Personal educational hardware and reports by James Burney (K9DTV). Course homework notes in `homework/` are included as archived class material. Altera/Intel tool output remains under their respective license terms.
 
 Site / contact: [k9dtv.com](https://k9dtv.com) · GitHub: [K9DTV](https://github.com/K9DTV)
 
