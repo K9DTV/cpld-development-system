@@ -1,5 +1,13 @@
 > **Archived — final / last release.** This project is complete and frozen. Issues and PRs are not expected; the tree is the historical record.
+
 # CPLD Development System
+
+[![Status](https://img.shields.io/badge/status-archived%20final-lightgrey)](https://github.com/K9DTV/cpld-development-system)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![Device](https://img.shields.io/badge/CPLD-EPM7064AE%20PLCC--44-orange)](https://github.com/K9DTV/cpld-development-system#quartus-project-calulator)
+[![Quartus](https://img.shields.io/badge/Quartus%20II-13.0%20SP1-blue)](https://github.com/K9DTV/cpld-development-system#quartus-project-calulator)
+[![PCB](https://img.shields.io/badge/PCB-KiCad%204-green)](https://github.com/K9DTV/cpld-development-system#kicad--fabrication-pcb-files)
+[![Labs](https://img.shields.io/badge/labs-Calculator%20%2B%20board%20tests-success)](https://github.com/K9DTV/cpld-development-system#quartus-project-calulator)
 
 A hand-designed Altera MAX 7000AE/S CPLD development board and the digital labs built on it — from Lake Washington Institute of Technology **Electronics 211** (2017–2018), by **James Burney (K9DTV)**.
 
