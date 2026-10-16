@@ -2,12 +2,14 @@
 
 # CPLD Development System
 
-[![Status](https://img.shields.io/badge/status-archived%20final-lightgrey)](https://github.com/K9DTV/cpld-development-system)
+[![Status](https://img.shields.io/badge/status-archived%20final-lightgrey)](https://github.com/K9DTV/cpld-development-system/releases/tag/v1.0.0)
+[![Release](https://img.shields.io/github/v/release/K9DTV/cpld-development-system?label=release)](https://github.com/K9DTV/cpld-development-system/releases/latest)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Device](https://img.shields.io/badge/CPLD-EPM7064S%20%2F%20AE%20PLCC--44-orange)](https://github.com/K9DTV/cpld-development-system#quartus-project-calulator)
 [![Quartus](https://img.shields.io/badge/Quartus%20II-13.0%20SP1-blue)](https://github.com/K9DTV/cpld-development-system#quartus-project-calulator)
 [![PCB](https://img.shields.io/badge/PCB-KiCad%204-green)](https://github.com/K9DTV/cpld-development-system#kicad--fabrication-pcb-files)
 [![Labs](https://img.shields.io/badge/labs-Calculator%205V%20%2B%203.3V%20%2B%20board%20tests-success)](https://github.com/K9DTV/cpld-development-system#quartus-project-calulator)
+[![Website](https://img.shields.io/badge/k9dtv.com-project%20page-0a7ea4)](https://k9dtv.com/project-cpld.html)
 
 A hand-designed Altera MAX 7000AE/S CPLD development board and the digital labs built on it — from Lake Washington Institute of Technology **Electronics 211** (2017–2018), by **James Burney (K9DTV)**.
 
@@ -67,7 +69,7 @@ Supported CPLDs (PLCC-44):
 │   ├── board test/                   # Board bring-up
 │   ├── board-test-2/                 # Switch / display exercise (32 MC)
 │   └── boardtest3/                   # Follow-on board test (uses board-test-2 BDFs)
-├── project docs/                     # Word write-ups (board build, PCB, counter, finals)
+├── project docs/                     # Word write-ups + markdown/ previews for GitHub
 └── homework/                         # Class notes (ELEC 211 Ch. 4)
 ```
 
@@ -158,12 +160,15 @@ Open with a modern KiCad via the legacy importer, or send the Gerbers straight t
 
 ## Documentation (`project docs/`)
 
-| File | Contents |
-|------|----------|
-| `211 build board.docx` | Hand-wired prototype + Ch. 7 calculator path |
-| `pcb document and cpld project.docx` | Ver1/Ver2 PCB, pin map, BOM, calculator labs |
-| `two digit counter cpld project.docx` | Counter lab on the PCB |
-| `211 PROJECT.docx` / `211 final.docx` | Course project / final write-ups |
+Original Word write-ups stay in the folder (provenance). **GitHub-readable Markdown previews** (text extracted from those `.docx` files) live under [`project docs/markdown/`](project%20docs/markdown/):
+
+| Word (original) | Markdown preview | Contents |
+|-----------------|------------------|----------|
+| `211 build board.docx` | [211-build-board.md](project%20docs/markdown/211-build-board.md) | Hand-wired prototype + Ch. 7 calculator path |
+| `pcb document and cpld project.docx` | [pcb-document-and-cpld-project.md](project%20docs/markdown/pcb-document-and-cpld-project.md) | Ver1/Ver2 PCB, pin map, BOM, calculator labs |
+| `two digit counter cpld project.docx` | [two-digit-counter-cpld-project.md](project%20docs/markdown/two-digit-counter-cpld-project.md) | Counter lab on the PCB |
+| `211 PROJECT.docx` | [211-project.md](project%20docs/markdown/211-project.md) | Course project write-up |
+| `211 final.docx` | [211-final.md](project%20docs/markdown/211-final.md) | Final write-up |
 
 Course context: **Lake Washington Institute of Technology**, Electronics 211, instructor **Professor Peter Welty**.
 
@@ -171,7 +176,7 @@ Course context: **Lake Washington Institute of Technology**, Electronics 211, in
 
 MIT -- see [LICENSE](LICENSE). Personal educational hardware and reports by James Burney (K9DTV). Course homework notes in `homework/` are included as archived class material. Altera/Intel tool output remains under their respective license terms.
 
-Site / contact: [k9dtv.com](https://k9dtv.com) · GitHub: [K9DTV](https://github.com/K9DTV)
+Site / project page: [k9dtv.com/project-cpld.html](https://k9dtv.com/project-cpld.html) · GitHub: [K9DTV/cpld-development-system](https://github.com/K9DTV/cpld-development-system)
 
 ---
 
