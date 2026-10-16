@@ -30,7 +30,7 @@ Supported CPLDs (PLCC-44):
 - **EPM7032** (32 macrocells) — enough for display/switch tests  
 - **EPM7064AE** (64 macrocells) — needed for the full calculator project  
 
-The Quartus project in `calulator/` is set for family **MAX 7000AE**, device **EPM7064AELC44-10** (64 macrocell PLCC-44 — the same package class as the board socket).
+The Quartus calculator in `calulator/` targets family **MAX7000AE**, device **EPM7064AELC44-10** (64 macrocell PLCC-44 — same package as the board socket).
 
 ## Repository layout
 
@@ -97,22 +97,17 @@ Documented in `project docs/`:
 
 ## Quartus project (`calulator/`)
 
-Intel/Altera **Quartus II** project (Lite / Web edition era). Top entity name: `calulator`.
+Intel/Altera **Quartus II** block-diagram calculator (class build, 2017–2018). Folder name spelling `calulator` is preserved; the project itself is named **`Calculator`**.
 
 | File | Role |
 |------|------|
-| `calulator.v` | Rebuildable Verilog calculator (Ver2 pins) |
-| `calulator.qsf` / `.qpf` | Project settings — device **EPM7064AELC44-10** |
-| `Chain1.cdf` | Programmer chain for the PLCC-44 part |
-| `db/` / `output_files/` | Historical tool output (older failed map used a desktop path) |
+| `Calculator.qpf` / `Calculator.qsf` | Open this project — device **EPM7064AELC44-10**, Ver2 pins |
+| `Calculator.bdf` + other `*.bdf` / `*.bsf` | Schematic sources (add/sub/mul/min-max, mux, hex display) |
+| `Calculator.pof` | Last successful programming file (fit **62 / 64** macrocells, Apr 2018) |
+| `Calculator.cdf` | Programmer chain (relative path to `Calculator.pof`) |
+| `Calculator.*.rpt` / `.pin` / `.summary` | Map / fit / timing reports from that build |
 
-The original 2018 design was a set of Quartus **Block Diagram** (`.bdf`) files on the author desktop. Those BDFs were never checked into git (the old `.qsf` only stored absolute `Users/Jim/Desktop/...` paths). They are replaced here by `calulator.v`, which implements the same lab modes and Ver2 pinout so the project can compile again.
-
-Suggested tools: **Quartus II 13.0 SP1** (or 17.1 Lite) with a USB-Blaster. Open `calulator/calulator.qpf`, compile, program the `.pof`.
-
-### Local clone note
-
-If photos or `project docs/` / `homework/` are missing after a partial copy, restore them from this GitHub repo (or from the mirror under the K9DTV site `assets/cpld/` tree). A sparse or interrupted checkout was the usual cause — not missing upstream content.
+Suggested tools: **Quartus II 13.0 SP1** (or 17.1 Lite) with a USB-Blaster. Open `calulator/Calculator.qpf`, recompile if needed, program `Calculator.pof`.
 
 ## KiCad / fabrication (`PCB-files/`)
 
