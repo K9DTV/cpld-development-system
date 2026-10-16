@@ -1,7 +1,7 @@
 > **Archived — final / last release.** This project is complete and frozen. Issues and PRs are not expected; the tree is the historical record.
 # CPLD Development System
 
-A hand-designed Altera MAX 7000S CPLD development board and the digital labs built on it — from Lake Washington Institute of Technology **Electronics 211** (2017–2018), by **James Burney (K9DTV)**.
+A hand-designed Altera MAX 7000AE/S CPLD development board and the digital labs built on it — from Lake Washington Institute of Technology **Electronics 211** (2017–2018), by **James Burney (K9DTV)**.
 
 This repository packs the PCB design, fabrication outputs, board photos, project write-ups, and a Quartus calculator experiment that targeted the board.
 
@@ -30,7 +30,7 @@ Supported CPLDs (PLCC-44):
 - **EPM7032** (32 macrocells) — enough for display/switch tests  
 - **EPM7064AE** (64 macrocells) — needed for the full calculator project  
 
-The Quartus project in this repo is set for family **MAX7000S**, device **EPM7160SLI84-10** (a larger sibling used while compiling the calculator logic).
+The Quartus project in `calulator/` is set for family **MAX 7000AE**, device **EPM7064AELC44-10** (64 macrocell PLCC-44 — the same package class as the board socket).
 
 ## Repository layout
 
@@ -97,11 +97,22 @@ Documented in `project docs/`:
 
 ## Quartus project (`calulator/`)
 
-Intel/Altera **Quartus II** project created around March 2018 (Lite / Web edition era). Top entity name: `calulator`.
+Intel/Altera **Quartus II** project (Lite / Web edition era). Top entity name: `calulator`.
 
-Block diagrams referenced by the `.qsf` (add/sub, multiplier, min/max, muxes, hex display) originally lived beside the project on the author’s desktop. Those `.bdf` sources are **not** all present in this archive — only the Quartus project shell, `db/`, and `output_files/` reports are. A recent map attempt fails because those schematic sources are missing; treat this folder as historical project metadata unless you restore the BDFs.
+| File | Role |
+|------|------|
+| `calulator.v` | Rebuildable Verilog calculator (Ver2 pins) |
+| `calulator.qsf` / `.qpf` | Project settings — device **EPM7064AELC44-10** |
+| `Chain1.cdf` | Programmer chain for the PLCC-44 part |
+| `db/` / `output_files/` | Historical tool output (older failed map used a desktop path) |
 
-Suggested tools: **Quartus II 13.0 SP1** (or the 17.1 Lite build noted in the `.qsf` header) with a USB-Blaster.
+The original 2018 design was a set of Quartus **Block Diagram** (`.bdf`) files on the author desktop. Those BDFs were never checked into git (the old `.qsf` only stored absolute `Users/Jim/Desktop/...` paths). They are replaced here by `calulator.v`, which implements the same lab modes and Ver2 pinout so the project can compile again.
+
+Suggested tools: **Quartus II 13.0 SP1** (or 17.1 Lite) with a USB-Blaster. Open `calulator/calulator.qpf`, compile, program the `.pof`.
+
+### Local clone note
+
+If photos or `project docs/` / `homework/` are missing after a partial copy, restore them from this GitHub repo (or from the mirror under the K9DTV site `assets/cpld/` tree). A sparse or interrupted checkout was the usual cause — not missing upstream content.
 
 ## KiCad / fabrication (`PCB-files/`)
 
