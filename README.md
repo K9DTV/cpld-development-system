@@ -14,11 +14,12 @@ A hand-designed Altera MAX 7000AE/S CPLD development board and the digital labs 
 This repository packs the PCB design, fabrication outputs, board photos, project write-ups, and a Quartus calculator experiment that targeted the board.
 
 <p align="center">
-  <img src="cpld-white.jpg" alt="CPLD development board (white silkscreen / Ver2)" width="420">
+  <img src="cpld-white.jpg" alt="CPLD development board (white silkscreen / Ver2) with MAX 7000S 5 V CPLD" width="420">
   &nbsp;
   <img src="cpld-green.jpg" alt="CPLD development board (green / Ver1 style)" width="420">
 </p>
 
+<p align="center"><em>Left (white / Ver2): board pictured with the <strong>MAX 7000S</strong> <strong>5&nbsp;V</strong> CPLD setup. Right (green): Ver1-style build.</em></p>
 
 ## What this board is
 
@@ -33,9 +34,20 @@ Two PCB revisions shipped:
 
 Power: about **6.5 V–12 V** input (prefer the low end; regulators get hot). Current-limit around **160 mA** when using a bench supply. Drive each display **decimal point with an open-drain** buffer so the DP turns fully off.
 
+### MAX 7000S (5 V) vs MAX 7000AE (3.3 V)
+
+Same PLCC-44 socket and the same lab/pin idea. The difference is supply voltage / family:
+
+| Family | Example parts | Core / I/O | Notes |
+|--------|---------------|------------|--------|
+| **MAX 7000S** | EPM7032 (non-AE) | **5 V** | Matches the white board photo setup |
+| **MAX 7000AE** | EPM7032AE, **EPM7064AE** | **3.3 V** | Needed for denser designs; Quartus calculator project is AE |
+
+Do not drop a 3.3 V AE part onto a rail wired only for 5 V (or the reverse) without checking the board regulators and VCCIO/VCCINT wiring.
+
 Supported CPLDs (PLCC-44):
 
-- **EPM7032** (32 macrocells) — enough for display/switch tests  
+- **EPM7032** / **EPM7032AE** (32 macrocells) — enough for display/switch / board-test labs  
 - **EPM7064AE** (64 macrocells) — needed for the full calculator project  
 
 The Quartus calculator in `calulator/` targets family **MAX7000AE**, device **EPM7064AELC44-10** (64 macrocell PLCC-44 — same package as the board socket).
