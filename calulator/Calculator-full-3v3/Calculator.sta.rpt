@@ -1,0 +1,328 @@
+TimeQuest Timing Analyzer report for Calculator
+Sat Aug 11 00:56:04 2018
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Fmax Summary
+  6. Setup Summary
+  7. Hold Summary
+  8. Recovery Summary
+  9. Removal Summary
+ 10. Minimum Pulse Width Summary
+ 11. Propagation Delay
+ 12. Minimum Propagation Delay
+ 13. Clock Transfers
+ 14. Report TCCS
+ 15. Report RSKM
+ 16. Unconstrained Paths
+ 17. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                                      ;
++--------------------+-------------------------------------------------------------------+
+; Quartus II Version ; Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition ;
+; Revision Name      ; Calculator                                                        ;
+; Device Family      ; MAX7000AE                                                         ;
+; Device Name        ; EPM7064AELC44-10                                                  ;
+; Timing Models      ; Final                                                             ;
+; Delay Model        ; Slow Model                                                        ;
+; Rise/Fall Delays   ; Unavailable                                                       ;
++--------------------+-------------------------------------------------------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 6      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
+----------
+; Clocks ;
+----------
+No clocks to report.
+
+
+----------------
+; Fmax Summary ;
+----------------
+No paths to report.
+
+
+-----------------
+; Setup Summary ;
+-----------------
+No paths to report.
+
+
+----------------
+; Hold Summary ;
+----------------
+No paths to report.
+
+
+--------------------
+; Recovery Summary ;
+--------------------
+No paths to report.
+
+
+-------------------
+; Removal Summary ;
+-------------------
+No paths to report.
+
+
+-------------------------------
+; Minimum Pulse Width Summary ;
+-------------------------------
+No paths to report.
+
+
++----------------------------------------------------------------+
+; Propagation Delay                                              ;
++--------------+-------------+--------+--------+--------+--------+
+; Input Port   ; Output Port ; RR     ; RF     ; FR     ; FF     ;
++--------------+-------------+--------+--------+--------+--------+
+; Clock        ; a           ; 21.000 ; 21.000 ; 21.000 ; 21.000 ;
+; Clock        ; b           ; 18.900 ; 18.900 ; 18.900 ; 18.900 ;
+; Clock        ; c           ; 18.900 ; 21.900 ; 21.900 ; 18.900 ;
+; Clock        ; d           ; 18.000 ; 18.900 ; 18.900 ; 18.000 ;
+; Clock        ; latch_L     ; 10.300 ;        ;        ; 10.300 ;
+; Clock        ; latch_R     ; 10.300 ;        ;        ; 10.300 ;
+; SW1          ; Left_DP     ; 17.200 ;        ;        ; 17.200 ;
+; SW1          ; Right_DP    ; 17.200 ;        ;        ; 17.200 ;
+; SW1          ; a           ; 34.800 ; 34.800 ; 34.800 ; 34.800 ;
+; SW1          ; b           ; 32.700 ; 32.700 ; 32.700 ; 32.700 ;
+; SW1          ; c           ; 31.700 ; 32.700 ; 32.700 ; 31.700 ;
+; SW1          ; d           ; 31.800 ; 31.800 ; 31.800 ; 31.800 ;
+; SW2          ; Left_DP     ; 17.200 ; 10.300 ; 10.300 ; 17.200 ;
+; SW2          ; Right_DP    ; 17.200 ; 10.300 ; 10.300 ; 17.200 ;
+; SW2          ; a           ; 34.800 ; 34.800 ; 34.800 ; 34.800 ;
+; SW2          ; b           ; 32.700 ; 32.700 ; 32.700 ; 32.700 ;
+; SW2          ; c           ; 31.700 ; 32.700 ; 32.700 ; 31.700 ;
+; SW2          ; d           ; 31.800 ; 31.800 ; 31.800 ; 31.800 ;
+; SW3          ; Left_DP     ;        ; 14.200 ; 14.200 ;        ;
+; SW3          ; Right_DP    ;        ; 14.200 ; 14.200 ;        ;
+; SW3          ; a           ; 28.800 ; 28.800 ; 28.800 ; 28.800 ;
+; SW3          ; b           ; 29.700 ; 29.700 ; 29.700 ; 29.700 ;
+; SW3          ; c           ; 28.800 ; 29.700 ; 29.700 ; 28.800 ;
+; SW3          ; d           ; 31.800 ; 31.800 ; 31.800 ; 31.800 ;
+; SW4          ; Left_DP     ;        ; 14.200 ; 14.200 ;        ;
+; SW4          ; Right_DP    ;        ; 14.200 ; 14.200 ;        ;
+; SW4          ; a           ; 27.900 ; 27.900 ; 27.900 ; 27.900 ;
+; SW4          ; b           ; 29.700 ; 29.700 ; 29.700 ; 29.700 ;
+; SW4          ; c           ; 27.900 ; 28.800 ; 28.800 ; 27.900 ;
+; SW4          ; d           ; 31.800 ; 31.800 ; 31.800 ; 31.800 ;
+; SW5          ; Left_DP     ;        ; 17.200 ; 17.200 ;        ;
+; SW5          ; Right_DP    ;        ; 17.200 ; 17.200 ;        ;
+; SW5          ; a           ; 34.800 ; 34.800 ; 34.800 ; 34.800 ;
+; SW5          ; b           ; 32.700 ; 32.700 ; 32.700 ; 32.700 ;
+; SW5          ; c           ; 32.700 ; 31.700 ; 31.700 ; 32.700 ;
+; SW5          ; d           ; 31.800 ; 31.800 ; 31.800 ; 31.800 ;
+; SW6          ; Left_DP     ; 10.300 ;        ;        ; 10.300 ;
+; SW6          ; Right_DP    ; 10.300 ;        ;        ; 10.300 ;
+; SW6          ; a           ; 31.800 ; 31.800 ; 31.800 ; 31.800 ;
+; SW6          ; b           ; 29.700 ; 29.700 ; 29.700 ; 29.700 ;
+; SW6          ; c           ; 29.700 ; 29.700 ; 29.700 ; 29.700 ;
+; SW6          ; d           ; 31.800 ; 31.800 ; 31.800 ; 31.800 ;
+; SW7          ; Left_DP     ; 14.200 ;        ;        ; 14.200 ;
+; SW7          ; Right_DP    ; 14.200 ;        ;        ; 14.200 ;
+; SW7          ; a           ; 31.800 ; 31.800 ; 31.800 ; 31.800 ;
+; SW7          ; b           ; 29.700 ; 29.700 ; 29.700 ; 29.700 ;
+; SW7          ; c           ; 28.800 ; 29.700 ; 29.700 ; 28.800 ;
+; SW7          ; d           ; 31.800 ; 31.800 ; 31.800 ; 31.800 ;
+; SW8          ; Left_DP     ; 14.200 ;        ;        ; 14.200 ;
+; SW8          ; Right_DP    ; 14.200 ;        ;        ; 14.200 ;
+; SW8          ; a           ; 27.900 ; 27.900 ; 27.900 ; 27.900 ;
+; SW8          ; b           ; 29.700 ; 29.700 ; 29.700 ; 29.700 ;
+; SW8          ; c           ; 28.800 ; 27.900 ; 27.900 ; 28.800 ;
+; SW8          ; d           ; 31.800 ; 31.800 ; 31.800 ; 31.800 ;
+; SW11-Add-Sub ; Left_DP     ; 17.200 ;        ;        ; 17.200 ;
+; SW11-Add-Sub ; Right_DP    ; 17.200 ;        ;        ; 17.200 ;
+; SW11-Add-Sub ; a           ; 28.800 ; 28.800 ; 28.800 ; 28.800 ;
+; SW11-Add-Sub ; b           ; 26.700 ; 26.700 ; 26.700 ; 26.700 ;
+; SW11-Add-Sub ; c           ; 28.700 ; 29.600 ; 29.600 ; 28.700 ;
+; SW11-Add-Sub ; d           ; 25.800 ; 25.800 ; 25.800 ; 25.800 ;
+; SW12-MULTI   ; Left_DP     ; 17.100 ;        ;        ; 17.100 ;
+; SW12-MULTI   ; Right_DP    ; 17.100 ;        ;        ; 17.100 ;
+; SW12-MULTI   ; a           ; 20.900 ; 20.900 ; 20.900 ; 20.900 ;
+; SW12-MULTI   ; b           ; 18.800 ; 18.800 ; 18.800 ; 18.800 ;
+; SW12-MULTI   ; c           ; 26.500 ; 24.700 ; 24.700 ; 26.500 ;
+; SW12-MULTI   ; d           ; 17.900 ; 17.000 ; 17.000 ; 17.900 ;
++--------------+-------------+--------+--------+--------+--------+
+
+
++----------------------------------------------------------------+
+; Minimum Propagation Delay                                      ;
++--------------+-------------+--------+--------+--------+--------+
+; Input Port   ; Output Port ; RR     ; RF     ; FR     ; FF     ;
++--------------+-------------+--------+--------+--------+--------+
+; Clock        ; a           ; 17.100 ; 17.100 ; 17.100 ; 17.100 ;
+; Clock        ; b           ; 17.100 ; 18.000 ; 18.000 ; 17.100 ;
+; Clock        ; c           ; 17.100 ; 18.000 ; 18.000 ; 17.100 ;
+; Clock        ; d           ; 14.200 ; 10.300 ; 10.300 ; 14.200 ;
+; Clock        ; latch_L     ; 10.300 ;        ;        ; 10.300 ;
+; Clock        ; latch_R     ; 10.300 ;        ;        ; 10.300 ;
+; SW1          ; Left_DP     ; 17.200 ;        ;        ; 17.200 ;
+; SW1          ; Right_DP    ; 17.200 ;        ;        ; 17.200 ;
+; SW1          ; a           ; 10.300 ; 17.100 ; 17.100 ; 10.300 ;
+; SW1          ; b           ; 17.100 ; 17.100 ; 17.100 ; 17.100 ;
+; SW1          ; c           ; 23.900 ; 23.900 ; 23.900 ; 23.900 ;
+; SW1          ; d           ; 21.000 ; 17.100 ; 17.100 ; 21.000 ;
+; SW2          ; Left_DP     ; 17.200 ; 10.300 ; 10.300 ; 17.200 ;
+; SW2          ; Right_DP    ; 17.200 ; 10.300 ; 10.300 ; 17.200 ;
+; SW2          ; a           ; 17.200 ; 17.200 ; 17.200 ; 17.200 ;
+; SW2          ; b           ; 10.300 ; 17.100 ; 17.100 ; 10.300 ;
+; SW2          ; c           ; 23.900 ; 24.000 ; 24.000 ; 23.900 ;
+; SW2          ; d           ; 21.000 ; 17.100 ; 17.100 ; 21.000 ;
+; SW3          ; Left_DP     ;        ; 10.300 ; 10.300 ;        ;
+; SW3          ; Right_DP    ;        ; 10.300 ; 10.300 ;        ;
+; SW3          ; a           ; 17.200 ; 17.200 ; 17.200 ; 17.200 ;
+; SW3          ; b           ; 17.200 ; 17.200 ; 17.200 ; 17.200 ;
+; SW3          ; c           ; 17.100 ; 18.000 ; 18.000 ; 17.100 ;
+; SW3          ; d           ; 18.000 ; 18.000 ; 18.000 ; 18.000 ;
+; SW4          ; Left_DP     ;        ; 10.300 ; 10.300 ;        ;
+; SW4          ; Right_DP    ;        ; 10.300 ; 10.300 ;        ;
+; SW4          ; a           ; 17.200 ; 17.200 ; 17.200 ; 17.200 ;
+; SW4          ; b           ; 17.200 ; 17.200 ; 17.200 ; 17.200 ;
+; SW4          ; c           ; 24.000 ; 24.000 ; 24.000 ; 24.000 ;
+; SW4          ; d           ; 17.100 ; 17.100 ; 17.100 ; 17.100 ;
+; SW5          ; Left_DP     ;        ; 17.200 ; 17.200 ;        ;
+; SW5          ; Right_DP    ;        ; 17.200 ; 17.200 ;        ;
+; SW5          ; a           ; 10.300 ; 17.100 ; 17.100 ; 10.300 ;
+; SW5          ; b           ; 17.100 ; 17.100 ; 17.100 ; 17.100 ;
+; SW5          ; c           ; 23.900 ; 23.900 ; 23.900 ; 23.900 ;
+; SW5          ; d           ; 17.100 ; 18.000 ; 18.000 ; 17.100 ;
+; SW6          ; Left_DP     ; 10.300 ;        ;        ; 10.300 ;
+; SW6          ; Right_DP    ; 10.300 ;        ;        ; 10.300 ;
+; SW6          ; a           ; 17.200 ; 17.200 ; 17.200 ; 17.200 ;
+; SW6          ; b           ; 10.300 ; 17.100 ; 17.100 ; 10.300 ;
+; SW6          ; c           ; 23.900 ; 23.900 ; 23.900 ; 23.900 ;
+; SW6          ; d           ; 21.000 ; 17.100 ; 17.100 ; 21.000 ;
+; SW7          ; Left_DP     ; 10.300 ;        ;        ; 10.300 ;
+; SW7          ; Right_DP    ; 10.300 ;        ;        ; 10.300 ;
+; SW7          ; a           ; 17.200 ; 17.200 ; 17.200 ; 17.200 ;
+; SW7          ; b           ; 17.200 ; 17.200 ; 17.200 ; 17.200 ;
+; SW7          ; c           ; 17.100 ; 18.000 ; 18.000 ; 17.100 ;
+; SW7          ; d           ; 17.100 ; 17.100 ; 17.100 ; 17.100 ;
+; SW8          ; Left_DP     ; 10.300 ;        ;        ; 10.300 ;
+; SW8          ; Right_DP    ; 10.300 ;        ;        ; 10.300 ;
+; SW8          ; a           ; 17.200 ; 17.200 ; 17.200 ; 17.200 ;
+; SW8          ; b           ; 17.200 ; 17.200 ; 17.200 ; 17.200 ;
+; SW8          ; c           ; 24.000 ; 24.000 ; 24.000 ; 24.000 ;
+; SW8          ; d           ; 17.100 ; 17.100 ; 17.100 ; 17.100 ;
+; SW11-Add-Sub ; Left_DP     ; 17.200 ;        ;        ; 17.200 ;
+; SW11-Add-Sub ; Right_DP    ; 17.200 ;        ;        ; 17.200 ;
+; SW11-Add-Sub ; a           ; 10.300 ; 10.300 ; 10.300 ; 10.300 ;
+; SW11-Add-Sub ; b           ; 10.300 ; 17.100 ; 17.100 ; 10.300 ;
+; SW11-Add-Sub ; c           ; 18.000 ; 17.100 ; 17.100 ; 18.000 ;
+; SW11-Add-Sub ; d           ; 11.200 ; 10.300 ; 10.300 ; 11.200 ;
+; SW12-MULTI   ; Left_DP     ; 17.100 ;        ;        ; 17.100 ;
+; SW12-MULTI   ; Right_DP    ; 17.100 ;        ;        ; 17.100 ;
+; SW12-MULTI   ; a           ; 10.200 ; 14.100 ; 14.100 ; 10.200 ;
+; SW12-MULTI   ; b           ; 17.000 ; 17.000 ; 17.000 ; 17.000 ;
+; SW12-MULTI   ; c           ; 17.000 ; 17.000 ; 17.000 ; 17.000 ;
+; SW12-MULTI   ; d           ; 10.200 ; 10.200 ; 10.200 ; 10.200 ;
++--------------+-------------+--------+--------+--------+--------+
+
+
+-------------------
+; Clock Transfers ;
+-------------------
+Nothing to report.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 11    ; 11   ;
+; Unconstrained Input Port Paths  ; 66    ; 66   ;
+; Unconstrained Output Ports      ; 8     ; 8    ;
+; Unconstrained Output Port Paths ; 66    ; 66   ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Sat Aug 11 00:56:03 2018
+Info: Command: quartus_sta Calculator -c Calculator
+Info: qsta_default_script.tcl version: #1
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (306004): Started post-fitting delay annotation
+Info (306005): Delay annotation completed successfully
+Warning (335095): TimeQuest Timing Analyzer does not support the analysis of latches as synchronous elements for the currently selected device family.
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'Calculator.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332096): The command derive_clocks did not find any clocks to derive.  No clocks were created or changed.
+Warning (332068): No clocks defined in design.
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info (332159): No clocks to report
+Info (332140): No fmax paths to report
+Info (332140): No Setup paths to report
+Info (332140): No Hold paths to report
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332140): No Minimum Pulse Width paths to report
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 4 warnings
+    Info: Peak virtual memory: 4523 megabytes
+    Info: Processing ended: Sat Aug 11 00:56:04 2018
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+
+

@@ -4,10 +4,10 @@
 
 [![Status](https://img.shields.io/badge/status-archived%20final-lightgrey)](https://github.com/K9DTV/cpld-development-system)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-[![Device](https://img.shields.io/badge/CPLD-EPM7064AE%20PLCC--44-orange)](https://github.com/K9DTV/cpld-development-system#quartus-project-calulator)
+[![Device](https://img.shields.io/badge/CPLD-EPM7064S%20%2F%20AE%20PLCC--44-orange)](https://github.com/K9DTV/cpld-development-system#quartus-project-calulator)
 [![Quartus](https://img.shields.io/badge/Quartus%20II-13.0%20SP1-blue)](https://github.com/K9DTV/cpld-development-system#quartus-project-calulator)
 [![PCB](https://img.shields.io/badge/PCB-KiCad%204-green)](https://github.com/K9DTV/cpld-development-system#kicad--fabrication-pcb-files)
-[![Labs](https://img.shields.io/badge/labs-Calculator%20%2B%20board%20tests-success)](https://github.com/K9DTV/cpld-development-system#quartus-project-calulator)
+[![Labs](https://img.shields.io/badge/labs-Calculator%205V%20%2B%203.3V%20%2B%20board%20tests-success)](https://github.com/K9DTV/cpld-development-system#quartus-project-calulator)
 
 A hand-designed Altera MAX 7000AE/S CPLD development board and the digital labs built on it — from Lake Washington Institute of Technology **Electronics 211** (2017–2018), by **James Burney (K9DTV)**.
 
@@ -40,17 +40,16 @@ Same PLCC-44 socket and the same lab/pin idea. The difference is supply voltage 
 
 | Family | Example parts | Core / I/O | Notes |
 |--------|---------------|------------|--------|
-| **MAX 7000S** | EPM7032 (non-AE) | **5 V** | Matches the white board photo setup |
-| **MAX 7000AE** | EPM7032AE, **EPM7064AE** | **3.3 V** | Needed for denser designs; Quartus calculator project is AE |
+| **MAX 7000S** | EPM7032, **EPM7064S** | **5 V** | White board photo; use `Calculator-full-5v` |
+| **MAX 7000AE** | EPM7032AE, **EPM7064AE** | **3.3 V** | Use `Calculator-full-3v3` |
 
-Do not drop a 3.3 V AE part onto a rail wired only for 5 V (or the reverse) without checking the board regulators and VCCIO/VCCINT wiring.
+Same calculator logic / pinout in both folders — pick the build that matches the CPLD voltage on the board. Do not mix a 5 V part with a 3.3 V rail (or the reverse) without checking VCCIO/VCCINT wiring.
 
 Supported CPLDs (PLCC-44):
 
-- **EPM7032** / **EPM7032AE** (32 macrocells) — enough for display/switch / board-test labs  
-- **EPM7064AE** (64 macrocells) — needed for the full calculator project  
-
-The Quartus calculator in `calulator/` targets family **MAX7000AE**, device **EPM7064AELC44-10** (64 macrocell PLCC-44 — same package as the board socket).
+- **EPM7032** / **EPM7032AE** (32 macrocells) — display/switch / board-test labs  
+- **EPM7064S** (64 MC, **5 V**) — full calculator (`calulator/Calculator-full-5v/`)  
+- **EPM7064AE** (64 MC, **3.3 V**) — full calculator (`calulator/Calculator-full-3v3/`)
 
 ## Repository layout
 
@@ -63,7 +62,8 @@ The Quartus calculator in `calulator/` targets family **MAX7000AE**, device **EP
 │   ├── cpld/                         # KiCad schematic + PCB (legacy KiCad 4 era)
 │   └── CLPD-grb/                     # Gerbers + drill for fab
 ├── calulator/                        # Quartus II projects (folder spelling preserved)
-│   ├── Calculator.*                  # Full calculator (64 MC)
+│   ├── Calculator-full-5v/           # Full calculator — EPM7064S / 5 V
+│   ├── Calculator-full-3v3/          # Full calculator — EPM7064AE / 3.3 V
 │   ├── board test/                   # Board bring-up
 │   ├── board-test-2/                 # Switch / display exercise (32 MC)
 │   └── boardtest3/                   # Follow-on board test (uses board-test-2 BDFs)
@@ -94,7 +94,7 @@ Programming-header pins follow the usual Altera JTAG layout (not duplicated in t
 
 | Ref | Part | Notes |
 |-----|------|--------|
-| IC1 | EPM7032 or EPM7064AE, PLCC-44 | 64 MC for full calculator |
+| IC1 | EPM7032 / EPM7064S (5 V) or EPM7064AE (3.3 V), PLCC-44 | 64 MC for full calculator |
 | U1–U2 | LM1117-5.0 | 5 V rails |
 | U3 | LM1117-3.3 | CPLD I/O / core as wired |
 | U4 | LM555 | ~66.6 kHz board clock |
@@ -115,26 +115,33 @@ Documented in `project docs/`:
    - SW11=0, SW12=0 → **min/max** (7485-style compare; DPs show a swap)
    - SW11=0, SW12=1 → **add**
    - SW11=1, SW12=1 → **subtract** (borrow aware)
-   - SW11=1, SW12=0 → **multiply**
+   - SW11=1, SW12=0 → **multiply**  
+   Full builds: `Calculator-full-5v/` (**EPM7064S**, 5 V) and `Calculator-full-3v3/` (**EPM7064AE**, 3.3 V).
 4. **Two-digit counter** — final-style exercise on the same pinout (`two digit counter cpld project.docx`).
 5. **Hand-wired prototype** — earlier 7000-series socket board used for Ch. 4 / Ch. 7 (`211 build board.docx`).
 
 ## Quartus project (`calulator/`)
 
-Intel/Altera **Quartus II** block-diagram calculator (class build, 2017–2018). Folder name spelling `calulator` is preserved; the project itself is named **`Calculator`**.
+Intel/Altera **Quartus II** block-diagram labs. Folder name spelling `calulator` is preserved. The calculator top entity is named **`Calculator`**.
 
-| File | Role |
-|------|------|
-| `Calculator.qpf` / `Calculator.qsf` | Open this project — device **EPM7064AELC44-10**, Ver2 pins |
-| `Calculator.bdf` + other `*.bdf` / `*.bsf` | Schematic sources (add/sub/mul/min-max, mux, hex display) |
-| `Calculator.pof` | Last successful programming file (fit **62 / 64** macrocells, Apr 2018) |
-| `Calculator.cdf` | Programmer chain (relative path to `Calculator.pof`) |
-| `Calculator.*.rpt` / `.pin` / `.summary` | Map / fit / timing reports from that build |
-| `board test/` | Bring-up (`boardtest.qpf`, EPM7064AE, Ver2 pins, `.pof` included) |
+### Full calculator (two voltage builds)
+
+| Folder | Device | I/O standard | Fit | Use when |
+|--------|--------|--------------|-----|----------|
+| `Calculator-full-5v/` | **EPM7064SLC44-10** (MAX7000S) | TTL (5 V) | 60 / 64 MC | 5 V CPLD (white board photo setup) |
+| `Calculator-full-3v3/` | **EPM7064AELC44-10** (MAX7000AE) | 3.3-V LVTTL | 60 / 64 MC | 3.3 V AE CPLD |
+
+Each folder has its own `Calculator.qpf`, BDFs/BSFs, `Calculator.pof`, and reports. Ver2 display pins (latch_R=33, latch_L=36, Left_DP=31). Open the folder that matches the chip on the board.
+
+### Board tests
+
+| Folder | Role |
+|--------|------|
+| `board test/` | Bring-up (`boardtest.qpf`, `.pof` included) |
 | `board-test-2/` | Switch/display lab (`board-test-2.qpf`, EPM7032AE, `.pof` included) |
 | `boardtest3/` | Later board test (`test3.qpf`; BDFs referenced from `../board-test-2/`) |
 
-Suggested tools: **Quartus II 13.0 SP1** (or 17.1 Lite) with a USB-Blaster. Open `calulator/Calculator.qpf` (or a board-test `.qpf`), recompile if needed, program the matching `.pof`.
+Suggested tools: **Quartus II 13.0 SP1** (or 17.1 Lite) with a USB-Blaster.
 
 ## KiCad / fabrication (`PCB-files/`)
 

@@ -1,0 +1,326 @@
+Analysis & Synthesis report for Calculator
+Fri May 30 23:43:40 2025
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Parameter Settings for User Entity Instance: Sub-cal:inst15|Multiplier:inst|8fadd:inst28
+  9. Parameter Settings for User Entity Instance: Sub-cal:inst15|Multiplier:inst|8fadd:inst17
+ 10. Parameter Settings for User Entity Instance: Sub-cal:inst15|Multiplier:inst|8fadd:inst
+ 11. Parameter Settings for User Entity Instance: Sub-cal:inst15|maxmin:inst27|7485:inst
+ 12. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                  ;
++-----------------------------+-------------------------------------------------+
+; Analysis & Synthesis Status ; Successful - Fri May 30 23:43:40 2025           ;
+; Quartus II 64-Bit Version   ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
+; Revision Name               ; Calculator                                      ;
+; Top-level Entity Name       ; Calculator                                      ;
+; Family                      ; MAX7000S                                        ;
+; Total macrocells            ; 60                                              ;
+; Total pins                  ; 20                                              ;
++-----------------------------+-------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                ;
++----------------------------------------------------------------------------+-----------------+---------------+
+; Option                                                                     ; Setting         ; Default Value ;
++----------------------------------------------------------------------------+-----------------+---------------+
+; Device                                                                     ; EPM7064SLC44-10 ;               ;
+; Top-level entity name                                                      ; Calculator      ; Calculator    ;
+; Family name                                                                ; MAX7000S        ; Cyclone IV GX ;
+; Use smart compilation                                                      ; Off             ; Off           ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On              ; On            ;
+; Enable compact report table                                                ; Off             ; Off           ;
+; Create Debugging Nodes for IP Cores                                        ; Off             ; Off           ;
+; Preserve fewer node names                                                  ; On              ; On            ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off             ; Off           ;
+; Verilog Version                                                            ; Verilog_2001    ; Verilog_2001  ;
+; VHDL Version                                                               ; VHDL_1993       ; VHDL_1993     ;
+; State Machine Processing                                                   ; Auto            ; Auto          ;
+; Safe State Machine                                                         ; Off             ; Off           ;
+; Extract Verilog State Machines                                             ; On              ; On            ;
+; Extract VHDL State Machines                                                ; On              ; On            ;
+; Ignore Verilog initial constructs                                          ; Off             ; Off           ;
+; Iteration limit for constant Verilog loops                                 ; 5000            ; 5000          ;
+; Iteration limit for non-constant Verilog loops                             ; 250             ; 250           ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On              ; On            ;
+; Infer RAMs from Raw Logic                                                  ; On              ; On            ;
+; Parallel Synthesis                                                         ; On              ; On            ;
+; NOT Gate Push-Back                                                         ; On              ; On            ;
+; Power-Up Don't Care                                                        ; On              ; On            ;
+; Remove Duplicate Registers                                                 ; On              ; On            ;
+; Ignore CARRY Buffers                                                       ; Off             ; Off           ;
+; Ignore CASCADE Buffers                                                     ; Off             ; Off           ;
+; Ignore GLOBAL Buffers                                                      ; Off             ; Off           ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off             ; Off           ;
+; Ignore LCELL Buffers                                                       ; Auto            ; Auto          ;
+; Ignore SOFT Buffers                                                        ; Off             ; Off           ;
+; Limit AHDL Integers to 32 Bits                                             ; Off             ; Off           ;
+; Optimization Technique                                                     ; Speed           ; Speed         ;
+; Allow XOR Gate Usage                                                       ; On              ; On            ;
+; Auto Logic Cell Insertion                                                  ; On              ; On            ;
+; Parallel Expander Chain Length                                             ; 4               ; 4             ;
+; Auto Parallel Expanders                                                    ; On              ; On            ;
+; Auto Open-Drain Pins                                                       ; On              ; On            ;
+; Auto Resource Sharing                                                      ; Off             ; Off           ;
+; Maximum Fan-in Per Macrocell                                               ; 100             ; 100           ;
+; Use LogicLock Constraints during Resource Balancing                        ; On              ; On            ;
+; Ignore translate_off and synthesis_off directives                          ; Off             ; Off           ;
+; Report Parameter Settings                                                  ; On              ; On            ;
+; Report Source Assignments                                                  ; On              ; On            ;
+; Report Connectivity Checks                                                 ; On              ; On            ;
+; HDL message level                                                          ; Level2          ; Level2        ;
+; Suppress Register Optimization Related Messages                            ; Off             ; Off           ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000            ; 5000          ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000            ; 5000          ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100             ; 100           ;
+; Block Design Naming                                                        ; Auto            ; Auto          ;
+; Synthesis Effort                                                           ; Auto            ; Auto          ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On              ; On            ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off             ; Off           ;
+; Analysis & Synthesis Message Level                                         ; Medium          ; Medium        ;
+; Disable Register Merging Across Hierarchies                                ; Auto            ; Auto          ;
+; Synthesis Seed                                                             ; 1               ; 1             ;
++----------------------------------------------------------------------------+-----------------+---------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 16     ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                        ;
++----------------------------------+-----------------+------------------------------------+-----------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                              ; Library ;
++----------------------------------+-----------------+------------------------------------+-----------------------------------------------------------+---------+
+; Mux-HexDisplay.bdf               ; yes             ; User Block Diagram/Schematic File  ; D:/Quartus/Calculator-full-5v/Mux-HexDisplay.bdf          ;         ;
+; Calculator.bdf                   ; yes             ; User Block Diagram/Schematic File  ; D:/Quartus/Calculator-full-5v/Calculator.bdf              ;         ;
+; Multiplier.bdf                   ; yes             ; User Block Diagram/Schematic File  ; D:/Quartus/Calculator-full-5v/Multiplier.bdf              ;         ;
+; maxmin.bdf                       ; yes             ; User Block Diagram/Schematic File  ; D:/Quartus/Calculator-full-5v/maxmin.bdf                  ;         ;
+; Sub-cal.bdf                      ; yes             ; User Block Diagram/Schematic File  ; D:/Quartus/Calculator-full-5v/Sub-cal.bdf                 ;         ;
+; Mux2-1.bdf                       ; yes             ; User Block Diagram/Schematic File  ; D:/Quartus/Calculator-full-5v/Mux2-1.bdf                  ;         ;
+; cal-sel.bdf                      ; yes             ; User Block Diagram/Schematic File  ; D:/Quartus/Calculator-full-5v/cal-sel.bdf                 ;         ;
+; add-sub-mod.bdf                  ; yes             ; User Block Diagram/Schematic File  ; D:/Quartus/Calculator-full-5v/add-sub-mod.bdf             ;         ;
+; Substractor.bdf                  ; yes             ; User Block Diagram/Schematic File  ; D:/Quartus/Calculator-full-5v/Substractor.bdf             ;         ;
+; 7404.bdf                         ; yes             ; Megafunction                       ; d:/altera/13/quartus/libraries/others/maxplus2/7404.bdf   ;         ;
+; 7483.v                           ; yes             ; Megafunction                       ; d:/altera/13/quartus/libraries/others/maxplus2/7483.v     ;         ;
+; 8fadd.tdf                        ; yes             ; Megafunction                       ; d:/altera/13/quartus/libraries/others/maxplus2/8fadd.tdf  ;         ;
+; aglobal.inc                      ; yes             ; Megafunction                       ; d:/altera/13/quartus/libraries/megafunctions/aglobal.inc  ;         ;
+; p8fadd.bdf                       ; yes             ; Megafunction                       ; d:/altera/13/quartus/libraries/others/maxplus2/p8fadd.bdf ;         ;
+; 74157.bdf                        ; yes             ; Megafunction                       ; d:/altera/13/quartus/libraries/others/maxplus2/74157.bdf  ;         ;
+; 7485.tdf                         ; yes             ; Megafunction                       ; d:/altera/13/quartus/libraries/others/maxplus2/7485.tdf   ;         ;
+; p7485.bdf                        ; yes             ; Megafunction                       ; d:/altera/13/quartus/libraries/others/maxplus2/p7485.bdf  ;         ;
++----------------------------------+-----------------+------------------------------------+-----------------------------------------------------------+---------+
+
+
++---------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary ;
++----------------------+----------------------+
+; Resource             ; Usage                ;
++----------------------+----------------------+
+; Logic cells          ; 60                   ;
+; Total registers      ; 0                    ;
+; I/O pins             ; 20                   ;
+; Shareable expanders  ; 26                   ;
+; Parallel expanders   ; 16                   ;
+; Maximum fan-out node ; SW2                  ;
+; Maximum fan-out      ; 40                   ;
+; Total fan-out        ; 494                  ;
+; Average fan-out      ; 4.66                 ;
++----------------------+----------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                  ;
++------------------------------+------------+------+--------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node   ; Macrocells ; Pins ; Full Hierarchy Name                                                ; Library Name ;
++------------------------------+------------+------+--------------------------------------------------------------------+--------------+
+; |Calculator                  ; 60         ; 20   ; |Calculator                                                        ; work         ;
+;    |Sub-cal:inst15|          ; 57         ; 0    ; |Calculator|Sub-cal:inst15                                         ; work         ;
+;       |Multiplier:inst|      ; 17         ; 0    ; |Calculator|Sub-cal:inst15|Multiplier:inst                         ; work         ;
+;          |8fadd:inst17|      ; 1          ; 0    ; |Calculator|Sub-cal:inst15|Multiplier:inst|8fadd:inst17            ; work         ;
+;             |p8fadd:sub|     ; 1          ; 0    ; |Calculator|Sub-cal:inst15|Multiplier:inst|8fadd:inst17|p8fadd:sub ; work         ;
+;          |8fadd:inst28|      ; 15         ; 0    ; |Calculator|Sub-cal:inst15|Multiplier:inst|8fadd:inst28            ; work         ;
+;             |p8fadd:sub|     ; 15         ; 0    ; |Calculator|Sub-cal:inst15|Multiplier:inst|8fadd:inst28|p8fadd:sub ; work         ;
+;          |8fadd:inst|        ; 1          ; 0    ; |Calculator|Sub-cal:inst15|Multiplier:inst|8fadd:inst              ; work         ;
+;             |p8fadd:sub|     ; 1          ; 0    ; |Calculator|Sub-cal:inst15|Multiplier:inst|8fadd:inst|p8fadd:sub   ; work         ;
+;       |Mux-HexDisplay:inst3| ; 28         ; 0    ; |Calculator|Sub-cal:inst15|Mux-HexDisplay:inst3                    ; work         ;
+;          |Mux2-1:inst2|      ; 28         ; 0    ; |Calculator|Sub-cal:inst15|Mux-HexDisplay:inst3|Mux2-1:inst2       ; work         ;
+;       |add-sub-mod:inst26|   ; 5          ; 0    ; |Calculator|Sub-cal:inst15|add-sub-mod:inst26                      ; work         ;
+;          |7483:inst3|        ; 5          ; 0    ; |Calculator|Sub-cal:inst15|add-sub-mod:inst26|7483:inst3           ; work         ;
+;       |maxmin:inst27|        ; 7          ; 0    ; |Calculator|Sub-cal:inst15|maxmin:inst27                           ; work         ;
+;          |7485:inst|         ; 2          ; 0    ; |Calculator|Sub-cal:inst15|maxmin:inst27|7485:inst                 ; work         ;
+;             |p7485:sub|      ; 2          ; 0    ; |Calculator|Sub-cal:inst15|maxmin:inst27|7485:inst|p7485:sub       ; work         ;
++------------------------------+------------+------+--------------------------------------------------------------------+--------------+
+
+
++------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Sub-cal:inst15|Multiplier:inst|8fadd:inst28 ;
++------------------------+----------+------------------------------------------------------+
+; Parameter Name         ; Value    ; Type                                                 ;
++------------------------+----------+------------------------------------------------------+
+; DEVICE_FAMILY          ; MAX7000S ; Untyped                                              ;
+; AUTO_CARRY_CHAINS      ; ON       ; AUTO_CARRY                                           ;
+; IGNORE_CARRY_BUFFERS   ; OFF      ; IGNORE_CARRY                                         ;
+; AUTO_CASCADE_CHAINS    ; ON       ; AUTO_CASCADE                                         ;
+; IGNORE_CASCADE_BUFFERS ; OFF      ; IGNORE_CASCADE                                       ;
++------------------------+----------+------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Sub-cal:inst15|Multiplier:inst|8fadd:inst17 ;
++------------------------+----------+------------------------------------------------------+
+; Parameter Name         ; Value    ; Type                                                 ;
++------------------------+----------+------------------------------------------------------+
+; DEVICE_FAMILY          ; MAX7000S ; Untyped                                              ;
+; AUTO_CARRY_CHAINS      ; ON       ; AUTO_CARRY                                           ;
+; IGNORE_CARRY_BUFFERS   ; OFF      ; IGNORE_CARRY                                         ;
+; AUTO_CASCADE_CHAINS    ; ON       ; AUTO_CASCADE                                         ;
+; IGNORE_CASCADE_BUFFERS ; OFF      ; IGNORE_CASCADE                                       ;
++------------------------+----------+------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Sub-cal:inst15|Multiplier:inst|8fadd:inst ;
++------------------------+----------+----------------------------------------------------+
+; Parameter Name         ; Value    ; Type                                               ;
++------------------------+----------+----------------------------------------------------+
+; DEVICE_FAMILY          ; MAX7000S ; Untyped                                            ;
+; AUTO_CARRY_CHAINS      ; ON       ; AUTO_CARRY                                         ;
+; IGNORE_CARRY_BUFFERS   ; OFF      ; IGNORE_CARRY                                       ;
+; AUTO_CASCADE_CHAINS    ; ON       ; AUTO_CASCADE                                       ;
+; IGNORE_CASCADE_BUFFERS ; OFF      ; IGNORE_CASCADE                                     ;
++------------------------+----------+----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Sub-cal:inst15|maxmin:inst27|7485:inst ;
++------------------------+----------+-------------------------------------------------+
+; Parameter Name         ; Value    ; Type                                            ;
++------------------------+----------+-------------------------------------------------+
+; DEVICE_FAMILY          ; MAX7000S ; Untyped                                         ;
+; AUTO_CARRY_CHAINS      ; ON       ; AUTO_CARRY                                      ;
+; IGNORE_CARRY_BUFFERS   ; OFF      ; IGNORE_CARRY                                    ;
+; AUTO_CASCADE_CHAINS    ; ON       ; AUTO_CASCADE                                    ;
+; IGNORE_CASCADE_BUFFERS ; OFF      ; IGNORE_CASCADE                                  ;
++------------------------+----------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Analysis & Synthesis
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Fri May 30 23:43:38 2025
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Calculator -c Calculator
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (12021): Found 1 design units, including 1 entities, in source file mux-hexdisplay.bdf
+    Info (12023): Found entity 1: Mux-HexDisplay
+Info (12021): Found 1 design units, including 1 entities, in source file calculator.bdf
+    Info (12023): Found entity 1: Calculator
+Info (12021): Found 1 design units, including 1 entities, in source file hexdisplay.bdf
+    Info (12023): Found entity 1: HexDisplay
+Info (12021): Found 1 design units, including 1 entities, in source file multiplier.bdf
+    Info (12023): Found entity 1: Multiplier
+Info (12021): Found 1 design units, including 1 entities, in source file maxmin.bdf
+    Info (12023): Found entity 1: maxmin
+Info (12021): Found 1 design units, including 1 entities, in source file sub-cal.bdf
+    Info (12023): Found entity 1: Sub-cal
+Info (12021): Found 1 design units, including 1 entities, in source file mux2-1.bdf
+    Info (12023): Found entity 1: Mux2-1
+Info (12021): Found 1 design units, including 1 entities, in source file cal-sel.bdf
+    Info (12023): Found entity 1: cal-sel
+Info (12021): Found 1 design units, including 1 entities, in source file add-sub-mod.bdf
+    Info (12023): Found entity 1: add-sub-mod
+Info (12021): Found 1 design units, including 1 entities, in source file 8bit-full-adder.bdf
+    Info (12023): Found entity 1: 8Bit-Full-Adder
+Info (12021): Found 1 design units, including 1 entities, in source file substractor.bdf
+    Info (12023): Found entity 1: Substractor
+Info (12021): Found 1 design units, including 1 entities, in source file alt-mux.bdf
+    Info (12023): Found entity 1: Alt-mux
+Info (12127): Elaborating entity "Calculator" for the top level hierarchy
+Info (12128): Elaborating entity "Sub-cal" for hierarchy "Sub-cal:inst15"
+Info (12128): Elaborating entity "Mux-HexDisplay" for hierarchy "Sub-cal:inst15|Mux-HexDisplay:inst3"
+Info (12128): Elaborating entity "Mux2-1" for hierarchy "Sub-cal:inst15|Mux-HexDisplay:inst3|Mux2-1:inst2"
+Info (12128): Elaborating entity "7404" for hierarchy "Sub-cal:inst15|Mux-HexDisplay:inst3|7404:inst"
+Info (12130): Elaborated megafunction instantiation "Sub-cal:inst15|Mux-HexDisplay:inst3|7404:inst"
+Info (12128): Elaborating entity "cal-sel" for hierarchy "Sub-cal:inst15|cal-sel:inst1"
+Info (12128): Elaborating entity "add-sub-mod" for hierarchy "Sub-cal:inst15|add-sub-mod:inst26"
+Info (12128): Elaborating entity "7483" for hierarchy "Sub-cal:inst15|add-sub-mod:inst26|7483:inst3"
+Info (12130): Elaborated megafunction instantiation "Sub-cal:inst15|add-sub-mod:inst26|7483:inst3"
+Info (12128): Elaborating entity "Substractor" for hierarchy "Sub-cal:inst15|add-sub-mod:inst26|Substractor:inst"
+Info (12128): Elaborating entity "Multiplier" for hierarchy "Sub-cal:inst15|Multiplier:inst"
+Info (12128): Elaborating entity "8fadd" for hierarchy "Sub-cal:inst15|Multiplier:inst|8fadd:inst28"
+Info (12130): Elaborated megafunction instantiation "Sub-cal:inst15|Multiplier:inst|8fadd:inst28"
+Info (12128): Elaborating entity "p8fadd" for hierarchy "Sub-cal:inst15|Multiplier:inst|8fadd:inst28|p8fadd:sub"
+Info (12131): Elaborated megafunction instantiation "Sub-cal:inst15|Multiplier:inst|8fadd:inst28|p8fadd:sub", which is child of megafunction instantiation "Sub-cal:inst15|Multiplier:inst|8fadd:inst28"
+Info (12128): Elaborating entity "8fadd" for hierarchy "Sub-cal:inst15|Multiplier:inst|8fadd:inst17"
+Info (12130): Elaborated megafunction instantiation "Sub-cal:inst15|Multiplier:inst|8fadd:inst17"
+Info (12128): Elaborating entity "8fadd" for hierarchy "Sub-cal:inst15|Multiplier:inst|8fadd:inst"
+Info (12130): Elaborated megafunction instantiation "Sub-cal:inst15|Multiplier:inst|8fadd:inst"
+Info (12128): Elaborating entity "maxmin" for hierarchy "Sub-cal:inst15|maxmin:inst27"
+Info (12128): Elaborating entity "74157" for hierarchy "Sub-cal:inst15|maxmin:inst27|74157:inst9"
+Info (12130): Elaborated megafunction instantiation "Sub-cal:inst15|maxmin:inst27|74157:inst9"
+Info (12128): Elaborating entity "7485" for hierarchy "Sub-cal:inst15|maxmin:inst27|7485:inst"
+Info (12130): Elaborated megafunction instantiation "Sub-cal:inst15|maxmin:inst27|7485:inst"
+Info (12128): Elaborating entity "p7485" for hierarchy "Sub-cal:inst15|maxmin:inst27|7485:inst|p7485:sub"
+Info (12131): Elaborated megafunction instantiation "Sub-cal:inst15|maxmin:inst27|7485:inst|p7485:sub", which is child of megafunction instantiation "Sub-cal:inst15|maxmin:inst27|7485:inst"
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "blank" is stuck at GND
+Info (21057): Implemented 106 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 11 input pins
+    Info (21059): Implemented 9 output pins
+    Info (21063): Implemented 60 macrocells
+    Info (21073): Implemented 26 shareable expanders
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 3 warnings
+    Info: Peak virtual memory: 4572 megabytes
+    Info: Processing ended: Fri May 30 23:43:40 2025
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:01
+
+
