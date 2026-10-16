@@ -42,7 +42,11 @@ The Quartus calculator in `calulator/` targets family **MAX7000AE**, device **EP
 ├── PCB-files/
 │   ├── cpld/                         # KiCad schematic + PCB (legacy KiCad 4 era)
 │   └── CLPD-grb/                     # Gerbers + drill for fab
-├── calulator/                        # Quartus II project (filename spelling preserved)
+├── calulator/                        # Quartus II projects (folder spelling preserved)
+│   ├── Calculator.*                  # Full calculator (64 MC)
+│   ├── board test/                   # Board bring-up
+│   ├── board-test-2/                 # Switch / display exercise (32 MC)
+│   └── boardtest3/                   # Follow-on board test (uses board-test-2 BDFs)
 ├── project docs/                     # Word write-ups (board build, PCB, counter, finals)
 └── homework/                         # Class notes (ELEC 211 Ch. 4)
 ```
@@ -106,8 +110,11 @@ Intel/Altera **Quartus II** block-diagram calculator (class build, 2017–2018).
 | `Calculator.pof` | Last successful programming file (fit **62 / 64** macrocells, Apr 2018) |
 | `Calculator.cdf` | Programmer chain (relative path to `Calculator.pof`) |
 | `Calculator.*.rpt` / `.pin` / `.summary` | Map / fit / timing reports from that build |
+| `board test/` | Bring-up (`boardtest.qpf`, EPM7064AE, Ver2 pins, `.pof` included) |
+| `board-test-2/` | Switch/display lab (`board-test-2.qpf`, EPM7032AE, `.pof` included) |
+| `boardtest3/` | Later board test (`test3.qpf`; BDFs referenced from `../board-test-2/`) |
 
-Suggested tools: **Quartus II 13.0 SP1** (or 17.1 Lite) with a USB-Blaster. Open `calulator/Calculator.qpf`, recompile if needed, program `Calculator.pof`.
+Suggested tools: **Quartus II 13.0 SP1** (or 17.1 Lite) with a USB-Blaster. Open `calulator/Calculator.qpf` (or a board-test `.qpf`), recompile if needed, program the matching `.pof`.
 
 ## KiCad / fabrication (`PCB-files/`)
 

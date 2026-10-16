@@ -1,0 +1,104 @@
+|boardtest
+A <= 7404:inst6.1
+sw1 => 7404:inst6.2
+B <= 7404:inst5.1
+sw2 => 7404:inst5.2
+C <= 7404:inst4.1
+sw3 => 7404:inst4.2
+D <= 7404:inst3.1
+sw4 => 7404:inst3.2
+LATCH_L <= 7404:inst2.1
+sw9 => 7404:inst2.2
+LATCH_R <= 7404:inst1.1
+sw10 => 7404:inst1.2
+BLANK <= 7404:inst.1
+sw12 => 7404:inst.2
+Left_DP <= inst13.DB_MAX_OUTPUT_PORT_TYPE
+clock => inst15.IN0
+Right_DP <= inst14.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|boardtest|7404:inst6
+1 <= 4.DB_MAX_OUTPUT_PORT_TYPE
+2 => 4.IN0
+
+
+|boardtest|7404:inst5
+1 <= 4.DB_MAX_OUTPUT_PORT_TYPE
+2 => 4.IN0
+
+
+|boardtest|7404:inst4
+1 <= 4.DB_MAX_OUTPUT_PORT_TYPE
+2 => 4.IN0
+
+
+|boardtest|7404:inst3
+1 <= 4.DB_MAX_OUTPUT_PORT_TYPE
+2 => 4.IN0
+
+
+|boardtest|7404:inst2
+1 <= 4.DB_MAX_OUTPUT_PORT_TYPE
+2 => 4.IN0
+
+
+|boardtest|7404:inst1
+1 <= 4.DB_MAX_OUTPUT_PORT_TYPE
+2 => 4.IN0
+
+
+|boardtest|7404:inst
+1 <= 4.DB_MAX_OUTPUT_PORT_TYPE
+2 => 4.IN0
+
+
+|boardtest|7404:inst12
+1 <= 4.DB_MAX_OUTPUT_PORT_TYPE
+2 => 4.IN0
+
+
+|boardtest|7493:inst7
+QD <= 13.DB_MAX_OUTPUT_PORT_TYPE
+RO1 => 1.IN0
+RO2 => 1.IN1
+CLKB => 44.IN0
+QC <= 14.DB_MAX_OUTPUT_PORT_TYPE
+QB <= 15.DB_MAX_OUTPUT_PORT_TYPE
+QA <= 16.DB_MAX_OUTPUT_PORT_TYPE
+CLKA => 43.IN0
+
+
+|boardtest|7493:inst11
+QD <= 13.DB_MAX_OUTPUT_PORT_TYPE
+RO1 => 1.IN0
+RO2 => 1.IN1
+CLKB => 44.IN0
+QC <= 14.DB_MAX_OUTPUT_PORT_TYPE
+QB <= 15.DB_MAX_OUTPUT_PORT_TYPE
+QA <= 16.DB_MAX_OUTPUT_PORT_TYPE
+CLKA => 43.IN0
+
+
+|boardtest|7493:inst9
+QD <= 13.DB_MAX_OUTPUT_PORT_TYPE
+RO1 => 1.IN0
+RO2 => 1.IN1
+CLKB => 44.IN0
+QC <= 14.DB_MAX_OUTPUT_PORT_TYPE
+QB <= 15.DB_MAX_OUTPUT_PORT_TYPE
+QA <= 16.DB_MAX_OUTPUT_PORT_TYPE
+CLKA => 43.IN0
+
+
+|boardtest|7493:inst8
+QD <= 13.DB_MAX_OUTPUT_PORT_TYPE
+RO1 => 1.IN0
+RO2 => 1.IN1
+CLKB => 44.IN0
+QC <= 14.DB_MAX_OUTPUT_PORT_TYPE
+QB <= 15.DB_MAX_OUTPUT_PORT_TYPE
+QA <= 16.DB_MAX_OUTPUT_PORT_TYPE
+CLKA => 43.IN0
+
+

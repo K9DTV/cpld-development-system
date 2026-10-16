@@ -1,0 +1,149 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Setup '7493:inst4|16'
+Slack : -8.800
+TNS   : -26.300
+
+Type  : Setup '7493:inst5|16'
+Slack : -8.800
+TNS   : -26.300
+
+Type  : Setup '7493:inst2|16'
+Slack : -8.700
+TNS   : -26.100
+
+Type  : Setup '7493:inst3|16'
+Slack : -8.700
+TNS   : -26.100
+
+Type  : Setup '7493:inst|16'
+Slack : -8.700
+TNS   : -26.100
+
+Type  : Setup '7493:inst1|15'
+Slack : -3.100
+TNS   : -3.100
+
+Type  : Setup '7493:inst1|16'
+Slack : -3.100
+TNS   : -3.100
+
+Type  : Setup '7493:inst2|13'
+Slack : -3.100
+TNS   : -3.100
+
+Type  : Setup '7493:inst3|13'
+Slack : -3.100
+TNS   : -3.100
+
+Type  : Setup '7493:inst4|13'
+Slack : -3.100
+TNS   : -3.100
+
+Type  : Setup '7493:inst|13'
+Slack : -3.100
+TNS   : -3.100
+
+Type  : Setup 'Clock'
+Slack : -1.600
+TNS   : -1.600
+
+Type  : Hold 'Clock'
+Slack : -2.000
+TNS   : -2.000
+
+Type  : Hold '7493:inst4|16'
+Slack : -0.600
+TNS   : -0.600
+
+Type  : Hold '7493:inst1|15'
+Slack : -0.500
+TNS   : -0.500
+
+Type  : Hold '7493:inst1|16'
+Slack : -0.500
+TNS   : -0.500
+
+Type  : Hold '7493:inst2|13'
+Slack : -0.500
+TNS   : -0.500
+
+Type  : Hold '7493:inst2|16'
+Slack : -0.500
+TNS   : -0.500
+
+Type  : Hold '7493:inst3|13'
+Slack : -0.500
+TNS   : -0.500
+
+Type  : Hold '7493:inst3|16'
+Slack : -0.500
+TNS   : -0.500
+
+Type  : Hold '7493:inst4|13'
+Slack : -0.500
+TNS   : -0.500
+
+Type  : Hold '7493:inst|13'
+Slack : -0.500
+TNS   : -0.500
+
+Type  : Hold '7493:inst|16'
+Slack : -0.500
+TNS   : -0.500
+
+Type  : Hold '7493:inst5|16'
+Slack : 5.600
+TNS   : 0.000
+
+Type  : Minimum Pulse Width '7493:inst2|16'
+Slack : -3.500
+TNS   : -21.000
+
+Type  : Minimum Pulse Width '7493:inst3|16'
+Slack : -3.500
+TNS   : -21.000
+
+Type  : Minimum Pulse Width '7493:inst4|16'
+Slack : -3.500
+TNS   : -21.000
+
+Type  : Minimum Pulse Width '7493:inst5|16'
+Slack : -3.500
+TNS   : -21.000
+
+Type  : Minimum Pulse Width '7493:inst|16'
+Slack : -3.500
+TNS   : -21.000
+
+Type  : Minimum Pulse Width '7493:inst1|15'
+Slack : -3.500
+TNS   : -7.000
+
+Type  : Minimum Pulse Width '7493:inst1|16'
+Slack : -3.500
+TNS   : -7.000
+
+Type  : Minimum Pulse Width '7493:inst2|13'
+Slack : -3.500
+TNS   : -7.000
+
+Type  : Minimum Pulse Width '7493:inst3|13'
+Slack : -3.500
+TNS   : -7.000
+
+Type  : Minimum Pulse Width '7493:inst4|13'
+Slack : -3.500
+TNS   : -7.000
+
+Type  : Minimum Pulse Width '7493:inst|13'
+Slack : -3.500
+TNS   : -7.000
+
+Type  : Minimum Pulse Width 'Clock'
+Slack : -3.500
+TNS   : -7.000
+
+------------------------------------------------------------

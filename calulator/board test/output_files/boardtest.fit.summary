@@ -1,0 +1,9 @@
+Fitter Status : Successful - Fri Apr 27 19:23:29 2018
+Quartus II 64-Bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition
+Revision Name : boardtest
+Top-level Entity Name : boardtest
+Family : MAX7000AE
+Device : EPM7064AELC44-10
+Timing Models : Final
+Total macrocells : 24 / 64 ( 38 % )
+Total pins : 21 / 36 ( 58 % )
